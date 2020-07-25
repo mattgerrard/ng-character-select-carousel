@@ -1,11 +1,18 @@
 {
   "name": "ng-character-select-carousel",
   "version": "0.0.1",
+  "description": "Angular character select carousel for 3 characters.",
+  "author": "Matthew Gerrard",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matthewgerrard/ng-character-select-carousel"
+  },
   "peerDependencies": {
     "@angular/common": "^10.0.4",
     "@angular/core": "^10.0.4"
   },
   "dependencies": {
+    "gsap": "^3.4.2",
     "tslib": "^2.0.0"
   }
 }

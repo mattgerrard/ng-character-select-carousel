@@ -134,7 +134,6 @@ export class NgCharacterSelectCarouselComponent implements OnInit, AfterViewInit
     }
 
     this.alreadySpinning = true;
-    this.selectedAvatar.emit(this.currentAvatarIndex);
 
     const carouselNativeElements = this.getCarouselElements();
     const currentLeftAvatarIndex = this.getPreviousIndex(this.currentAvatarIndex);
@@ -168,6 +167,8 @@ export class NgCharacterSelectCarouselComponent implements OnInit, AfterViewInit
       moveToCenterDirection = Direction.Right;
       nextAvatarIndex = currentLeftAvatarIndex;
     }
+
+    this.selectedAvatar.emit(nextAvatarIndex);
 
     const timeline = gsap.timeline({ repeat: 0});
     timeline.set([moveAcrossBackAvatar], {
