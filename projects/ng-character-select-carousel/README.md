@@ -3,6 +3,8 @@
 * A spinning character select carousel supporting 3 characters. Powered by [gsap](https://greensock.com).
 * Library location: `projects/ng-character-select-carousel` directory of this repository.
 
+![Example carousel](https://github.com/matthewgerrard/ng-character-select-carousel/raw/master/example.gif)
+
 ## Examples/Demo
 
 * An example can be found under `src/app` directory of this repository.
