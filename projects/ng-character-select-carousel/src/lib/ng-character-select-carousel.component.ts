@@ -22,7 +22,7 @@ export enum Direction {
 }
 
 @Component({
-  selector: 'lib-ng-character-select-carousel',
+  selector: 'ng-character-select-carousel',
   template: `
     <div class="container">
       <div class="carousel">
@@ -69,6 +69,9 @@ export class NgCharacterSelectCarouselComponent implements OnInit, AfterViewInit
   @Output()
   public selectedAvatar = new EventEmitter<number>();
 
+  @ViewChildren('carouselItem')
+  private carouselItems: QueryList<ElementRef>;
+
   public currentAvatarIndex = 1;
 
   private readonly inactiveProperties = {
@@ -79,9 +82,6 @@ export class NgCharacterSelectCarouselComponent implements OnInit, AfterViewInit
   private readonly opacityProperties = {
     opacity: 0.3
   };
-
-  @ViewChildren('carouselItem')
-  private carouselItems: QueryList<ElementRef>;
 
   private alreadySpinning = true;
 
@@ -106,7 +106,10 @@ export class NgCharacterSelectCarouselComponent implements OnInit, AfterViewInit
     if (!this.image3MaskUrl) {
       this.image3MaskUrl = IMG_SAMPLE_MASK;
     }
-    this.spinSubscription = this.spins.subscribe((d: Direction) => this.spinCarousel(d));
+
+    if (this.spins) {
+      this.spinSubscription = this.spins.subscribe((d: Direction) => this.spinCarousel(d));
+    }
     this.selectedAvatar.emit(this.currentAvatarIndex);
   }
 

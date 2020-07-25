@@ -11,7 +11,7 @@ import {Direction} from 'ng-character-select-carousel';
           <span>{{selectedAvatar}}</span>
           <button (click)="right()">Right</button>
         </div>
-        <lib-ng-character-select-carousel 
+        <ng-character-select-carousel 
             image1Url="./assets/0.png"
             image1MaskUrl="./assets/0-mask.png"
             image2Url="./assets/1.png"
@@ -20,7 +20,7 @@ import {Direction} from 'ng-character-select-carousel';
             image3MaskUrl="./assets/2-mask.png"
             [spins]="eventsSubject.asObservable()"
             (selectedAvatar)="onSelectedAvatar($event)">
-        </lib-ng-character-select-carousel>        
+        </ng-character-select-carousel>        
       </div>
   `,
   styleUrls: ['./app.component.css']
