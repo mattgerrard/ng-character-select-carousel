@@ -12,6 +12,12 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ng-character-select-carousel/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ng-character-select-carousel/tsconfig.spec.json"
     }
 ]
 }

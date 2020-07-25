@@ -105,6 +105,46 @@
           }
         }
       }
+    },
+    "ng-character-select-carousel": {
+      "projectType": "library",
+      "root": "projects/ng-character-select-carousel",
+      "sourceRoot": "projects/ng-character-select-carousel/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-character-select-carousel/tsconfig.lib.json",
+            "project": "projects/ng-character-select-carousel/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-character-select-carousel/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-character-select-carousel/src/test.ts",
+            "tsConfig": "projects/ng-character-select-carousel/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-character-select-carousel/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-character-select-carousel/tsconfig.lib.json",
+              "projects/ng-character-select-carousel/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "character-select-carousel"
 }
