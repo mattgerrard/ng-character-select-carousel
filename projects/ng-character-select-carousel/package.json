@@ -7,6 +7,19 @@
     "type": "git",
     "url": "https://github.com/matthewgerrard/ng-character-select-carousel"
   },
+  "bugs": {
+    "url": "https://github.com/matthewgerrard/ng-character-select-carousel/issues"
+  },
+  "homepage": "https://github.com/matthewgerrard/ng-character-select-carousel",
+  "keywords": [
+    "angular",
+    "javascript",
+    "typescript",
+    "carosel",
+    "character",
+    "select"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^10.0.4",
     "@angular/core": "^10.0.4"
