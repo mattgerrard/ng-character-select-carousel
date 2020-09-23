@@ -7,7 +7,7 @@ import {
   ViewChildren,
   EventEmitter
 } from '@angular/core';
-import { gsap, Sine } from "gsap/dist/gsap"
+import { gsap, Sine } from 'gsap'
 import {
   IMG_SAMPLE_1,
   IMG_SAMPLE_2,
